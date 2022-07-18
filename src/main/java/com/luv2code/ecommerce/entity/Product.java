@@ -49,5 +49,7 @@ public class Product {
     @UpdateTimestamp
     private Date lastUpdated;
 
-
+    @ManyToOne
+    @JoinColumn(name="category_id", nullable = false)
+    private ProductCategory category;
 }
